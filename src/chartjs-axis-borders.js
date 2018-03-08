@@ -20,9 +20,9 @@ const chartjsBorders = {
     const context = chartInstance.ctx;
     context.save();
 
-    context.lineWidth = helpers.getValueOrDefault(options.lineWidth, this.defaultOptions.lineWidth);
-    context.strokeStyle = helpers.getValueOrDefault(options.strokeStyle, this.defaultOptions.strokeStyle);
-    helpers.each(chart.scales, scale => {
+    context.lineWidth = ChartJSHelpers.getValueOrDefault(options.lineWidth, this.defaultOptions.lineWidth);
+    context.strokeStyle = ChartJSHelpers.getValueOrDefault(options.strokeStyle, this.defaultOptions.strokeStyle);
+    ChartJSHelpers.each(chart.scales, scale => {
       const me = scale;
       let x1 = me.left;
       let x2 = me.right;
