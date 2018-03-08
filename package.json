@@ -2,7 +2,7 @@
   "name": "chartjs-plugin-axis-borders",
   "version": "0.0.1",
   "description": "Draw a border line for the axis",
-  "main": "dist/chartjs-axis-borders.js",
+  "main": "src/chartjs-axis-borders.js",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",
