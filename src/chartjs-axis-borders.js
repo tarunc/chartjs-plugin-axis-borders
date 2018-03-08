@@ -22,7 +22,7 @@ const chartjsBorders = {
 
     context.lineWidth = ChartJSHelpers.getValueOrDefault(options.lineWidth, this.defaultOptions.lineWidth);
     context.strokeStyle = ChartJSHelpers.getValueOrDefault(options.strokeStyle, this.defaultOptions.strokeStyle);
-    ChartJSHelpers.each(chart.scales, scale => {
+    ChartJSHelpers.each(chartInstance.scales, scale => {
       const me = scale;
       let x1 = me.left;
       let x2 = me.right;
