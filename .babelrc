@@ -1,13 +1,13 @@
 {
   "presets": [
     ["env", {
-        "modules": false,
+        "modules": "umd",
         "targets": {
           "browsers": "> 0.3%",
           "uglify": true,
           "firefox": "45"
         },
-        "useBuiltIns": false
+        "useBuiltIns": true
     }]
   ]
 }
