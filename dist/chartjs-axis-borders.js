@@ -37,7 +37,7 @@
 
   // Create the plugin
   var chartjsBorders = {
-    id: 'axisBorders',
+    id: 'axisborders',
     defaultOptions: defaultOptions,
     afterDraw: function afterDraw(chartInstance) {
       var options = chartInstance.options.axisBorders;

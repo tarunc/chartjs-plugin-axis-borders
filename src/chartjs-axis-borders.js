@@ -10,7 +10,7 @@ const defaultOptions = {
 
 // Create the plugin
 const chartjsBorders = {
-  id: 'axisBorders',
+  id: 'axisborders',
   defaultOptions,
   afterDraw(chartInstance) {
     const options = chartInstance.options.axisBorders;
