@@ -1,6 +1,6 @@
 {
   "name": "chartjs-plugin-axis-borders",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Draw a border line for the axis",
   "main": "dist/chartjs-axis-borders.js",
   "scripts": {
