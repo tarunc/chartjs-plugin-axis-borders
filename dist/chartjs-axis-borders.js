@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'chart.js', 'chart.js/src/helpers'], factory);
+    define(['exports', 'chart.js'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('chart.js'), require('chart.js/src/helpers'));
+    factory(exports, require('chart.js'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.chart, global.helpers);
+    factory(mod.exports, global.chart);
     global.chartjsAxisBorders = mod.exports;
   }
-})(this, function (exports, _chart, _helpers) {
+})(this, function (exports, _chart) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -19,16 +19,16 @@
 
   var _chart2 = _interopRequireDefault(_chart);
 
-  var _helpers2 = _interopRequireDefault(_helpers);
-
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
       default: obj
     };
   }
 
-  // Import chart.js
-  var Chart = typeof _chart2.default === 'function' ? _chart2.default : window.Chart;
+  var Chart = typeof _chart2.default === 'function' ? _chart2.default : window.Chart; // Import chart.js
+
+
+  var ChartJSHelpers = Chart.helpers;
 
   var defaultOptions = {
     lineWidth: 2,
@@ -48,9 +48,9 @@
       var context = chartInstance.ctx;
       context.save();
 
-      context.lineWidth = _helpers2.default.getValueOrDefault(options.lineWidth, this.defaultOptions.lineWidth);
-      context.strokeStyle = _helpers2.default.getValueOrDefault(options.strokeStyle, this.defaultOptions.strokeStyle);
-      _helpers2.default.each(chartInstance.scales, function (scale) {
+      context.lineWidth = ChartJSHelpers.getValueOrDefault(options.lineWidth, this.defaultOptions.lineWidth);
+      context.strokeStyle = ChartJSHelpers.getValueOrDefault(options.strokeStyle, this.defaultOptions.strokeStyle);
+      ChartJSHelpers.each(chartInstance.scales, function (scale) {
         var me = scale;
         var x1 = me.left;
         var x2 = me.right;
@@ -59,7 +59,7 @@
         var isHorizontal = me.isHorizontal();
         var options = me.options;
 
-        var aliasPixel = _helpers2.default.aliasPixel(context.lineWidth);
+        var aliasPixel = ChartJSHelpers.aliasPixel(context.lineWidth);
         if (isHorizontal) {
           y1 = y2 = options.position === 'top' ? me.bottom : me.top;
           y1 += aliasPixel;

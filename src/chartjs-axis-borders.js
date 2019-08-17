@@ -1,7 +1,8 @@
 // Import chart.js
 import ChartJS from 'chart.js';
-import ChartJSHelpers from 'chart.js/src/helpers';
 const Chart = (typeof(ChartJS) === 'function' ? ChartJS : window.Chart);
+
+const ChartJSHelpers = Chart.helpers;
 
 const defaultOptions = {
   lineWidth: 2,
